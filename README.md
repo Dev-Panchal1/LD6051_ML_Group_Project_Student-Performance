@@ -1,4 +1,4 @@
-# LD6051 — Predicting Student Academic Performance Using Cloud-Based Machine Learning
+# LD6051 Predicting Student Academic Performance Using Cloud-Based Machine Learning
 
 Group project for **LD6051 Machine Learning on the Cloud**.
 Built and run on **Google Colaboratory** (free CPU runtime).
@@ -18,7 +18,6 @@ trained and compared on the same data, and the strongest model is identified.
 
 | | |
 |---|---|
-| **Group members** | Chaw · Dev Panchal (25068552) · Keerthana Mathavan |
 | **Cloud platform** | Google Colaboratory |
 | **Dataset** | `StudentPerformanceFactors.csv` — 6,607 records, 19 input features |
 | **Dataset source** | [Kaggle — Student Performance Factors](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors) |
