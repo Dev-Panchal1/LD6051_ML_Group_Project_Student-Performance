@@ -12,12 +12,14 @@ Built and run on **Google Colaboratory** (free CPU runtime).
 This project applies machine learning to predict student academic performance
 and to identify which factors most influence exam results. Three classifiers are
 trained and compared on the same data, and the strongest model is identified.
-| |
+
+| Item | Detail |
+|---|---|
 | **Cloud platform** | Google Colaboratory |
 | **Dataset** | `StudentPerformanceFactors.csv` - 6,607 records, 19 input features |
 | **Dataset source** | [Kaggle - Student Performance Factors](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors) |
 | **Task** | Multi-class classification (Low / Medium / High performance) |
-| **Best model** | Support Vector Machine (RBF)- 85.70% accuracy, macro-F1 0.85 |
+| **Best model** | Support Vector Machine (RBF) - 85.70% accuracy, macro-F1 0.85 |
 
 ---
 
@@ -132,4 +134,3 @@ This model should support human judgement, not replace it. Even at 85.70%
 accuracy, roughly one prediction in seven is incorrect, and the error rate is
 higher still for the Medium band. A prediction is not a judgement about a
 student.
-
