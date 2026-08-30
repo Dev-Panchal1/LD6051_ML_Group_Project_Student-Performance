@@ -1,12 +1,9 @@
-# LD6051 Predicting Student Academic Performance Using Cloud-Based Machine Learning
+# LD6051 - Predicting Student Academic Performance Using Cloud-Based Machine Learning
 
 Group project for **LD6051 Machine Learning on the Cloud**.
 Built and run on **Google Colaboratory** (free CPU runtime).
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR-USERNAME/YOUR-REPO/blob/main/LD6051_ML_Group_Project.ipynb)
-
-> Replace `YOUR-USERNAME/YOUR-REPO` in the badge link above with your own GitHub
-> username and repository name so the button opens the notebook directly in Colab.
+[![Click here To Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Dev-Panchal1/LD6051_ML_Group_Project_Student-Performance/blob/main/LD6051_ML_Group_Project.ipynb)
 
 ---
 
@@ -16,13 +13,11 @@ This project applies machine learning to predict student academic performance
 and to identify which factors most influence exam results. Three classifiers are
 trained and compared on the same data, and the strongest model is identified.
 
-| | |
-|---|---|
 | **Cloud platform** | Google Colaboratory |
-| **Dataset** | `StudentPerformanceFactors.csv` — 6,607 records, 19 input features |
-| **Dataset source** | [Kaggle — Student Performance Factors](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors) |
+| **Dataset** | `StudentPerformanceFactors.csv` - 6,607 records, 19 input features |
+| **Dataset source** | [Kaggle - Student Performance Factors](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors) |
 | **Task** | Multi-class classification (Low / Medium / High performance) |
-| **Best model** | Support Vector Machine (RBF) — 85.70% accuracy, macro-F1 0.85 |
+| **Best model** | Support Vector Machine (RBF)- 85.70% accuracy, macro-F1 0.85 |
 
 ---
 
@@ -30,7 +25,7 @@ trained and compared on the same data, and the strongest model is identified.
 
 | File | Description |
 |---|---|
-| `LD6051_ML_Group_Project.ipynb` | The complete notebook — data loading through to model comparison, with all outputs and charts saved |
+| `LD6051_ML_Group_Project.ipynb` | The complete notebook - data loading through to model comparison, with all outputs and charts saved |
 | `StudentPerformanceFactors.csv` | The dataset used |
 | `README.md` | This file |
 
@@ -38,13 +33,13 @@ trained and compared on the same data, and the strongest model is identified.
 
 ## How to run
 
-**Option 1 — Google Colab (recommended)**
+**Option 1 - Google Colab (Recommended)**
 
 1. Click the *Open in Colab* badge above.
-2. Select **Runtime → Run all**.
+2. Select **Runtime - Run all**.
 3. When prompted, upload `StudentPerformanceFactors.csv` (also in this repository).
 
-**Option 2 — Locally with Jupyter**
+**Option 2 - Locally with Jupyter**
 
 ```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
@@ -61,26 +56,26 @@ notebook reproduces every figure below exactly.
 
 ## Method
 
-1. **Exploratory data analysis** — distributions, boxplots by category and a
+1. **Exploratory data analysis** - distributions, boxplots by category and a
    correlation heatmap.
-2. **Feature engineering** — the continuous `Exam_Score` is converted into three
+2. **Feature engineering** - the continuous `Exam_Score` is converted into three
    ordinal classes using quantile binning (`pd.qcut`), because the raw score has
    a standard deviation of only 3.89 marks and an interquartile range of four
    marks. `Exam_Score` is then dropped to prevent target leakage.
-3. **Pre-processing** — missing values retained as a distinct category, all 13
+3. **Pre-processing** - missing values retained as a distinct category, all 13
    categorical columns integer-encoded, `StandardScaler` fitted on the training
    partition only.
-4. **Split** — stratified 80/20 (5,285 training / 1,322 test records).
-5. **Models** — Decision Tree, Random Forest and SVM (RBF), all evaluated on the
+4. **Split** - stratified 80/20 (5,285 training / 1,322 test records).
+5. **Models** - Decision Tree, Random Forest and SVM (RBF), all evaluated on the
    identical test partition.
 
 ### Target classes
 
-| Class code | Label | Exam score range | Records |
+| Class Code | Label | Exam Score Range | Records |
 |---|---|---|---|
-| 0 | High | 70 – 101 | 1,625 (24.6%) |
-| 1 | Low | 55 – 66 | 2,882 (43.6%) |
-| 2 | Medium | 67 – 69 | 2,100 (31.8%) |
+| 0 | High | 70 - 101 | 1,625 (24.6%) |
+| 1 | Low | 55 - 66 | 2,882 (43.6%) |
+| 2 | Medium | 67 - 69 | 2,100 (31.8%) |
 
 > `LabelEncoder` assigns codes alphabetically, which is why High = 0 rather than
 > the intuitive ordering. This mapping is needed to read the confusion matrices
@@ -109,12 +104,12 @@ the top three.
 
 ---
 
-## Known limitations
+## Known Limitations
 
 1. `LabelEncoder` assigns codes alphabetically, scrambling the true
    Low < Medium < High ordering. Harmless for the tree models, but a genuine
    weakness for the SVM's distance-based kernel.
-2. No hyperparameter search — the settings are reasoned defaults, so these are
+2. No hyperparameter search - the settings are reasoned defaults, so these are
    baseline rather than optimised results.
 3. Evaluation rests on a single 80/20 split rather than k-fold cross-validation.
 4. Class imbalance was managed (stratification, macro-F1) rather than corrected.
@@ -131,9 +126,10 @@ the top three.
 
 ---
 
-## Ethical note
+## Ethical Note
 
 This model should support human judgement, not replace it. Even at 85.70%
 accuracy, roughly one prediction in seven is incorrect, and the error rate is
 higher still for the Medium band. A prediction is not a judgement about a
 student.
+
