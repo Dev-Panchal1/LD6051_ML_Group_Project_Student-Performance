@@ -12,7 +12,7 @@ Built and run on **Google Colaboratory** (free CPU runtime).
 This project applies machine learning to predict student academic performance
 and to identify which factors most influence exam results. Three classifiers are
 trained and compared on the same data, and the strongest model is identified.
-
+| |
 | **Cloud platform** | Google Colaboratory |
 | **Dataset** | `StudentPerformanceFactors.csv` - 6,607 records, 19 input features |
 | **Dataset source** | [Kaggle - Student Performance Factors](https://www.kaggle.com/datasets/lainguyn123/student-performance-factors) |
